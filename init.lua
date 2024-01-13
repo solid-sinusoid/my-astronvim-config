@@ -55,7 +55,26 @@ return {
         },
       },
     },
-
+    options = {
+      opts = {
+        laststatus = 2,
+      },
+    },
+    dap = {
+      adapters = {
+        cppdbg = {
+          id = "cppdbg",
+          type = "executable",
+          command = vim.fn.stdpath "data" .. "/mason/bin/OpenDebugAD7",
+          args = {},
+        },
+      },
+    },
+    ibl = {
+      indentLine_enabled = 1,
+      show_current_context = true,
+      show_current_context_start = true
+    },
     -- This function is run last and is a good place to configuring
     -- augroups/autocommands and custom filetypes also this just pure lua so
     -- anything that doesn't fit in the normal config locations above can go here
@@ -72,6 +91,7 @@ return {
       --     ["~/%.config/foo/.*"] = "fooscript",
       --   },
       -- }
+      require("nvim-dap-projects").search_project_config()
     end,
   },
 }
