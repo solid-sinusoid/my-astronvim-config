@@ -1,0 +1,14 @@
+{
+  "pa, package, add": {
+    "body": [
+      "{",
+      "    \"${1:package_name}\",",
+      "    event = \"${2:event}\",",
+      "    opts = {",
+      "      ${3:opts}",
+      "    },",
+      "  }"
+    ],
+    "prefix": "pa, package, add"
+  }
+}

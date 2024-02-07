@@ -70,10 +70,11 @@ return {
         },
       },
     },
-    ibl = {
-      indentLine_enabled = 1,
-      show_current_context = true,
-      show_current_context_start = true
+    vim.filetype.add {
+      pattern = {
+        ["main.yml"] = "yaml.ansible",
+        ["playbook.yml"] = "yaml.ansible",
+      },
     },
     -- This function is run last and is a good place to configuring
     -- augroups/autocommands and custom filetypes also this just pure lua so

@@ -6,4 +6,8 @@ return {
 
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.project.nvim-spectre" },
+  -- { import = "astrocommunity.scrolling.mini-animate"},
+  { import = "astrocommunity.scrolling.nvim-scrollbar"},
+
 }

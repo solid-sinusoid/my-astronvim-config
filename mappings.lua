@@ -7,7 +7,10 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
-
+    ["<leader>se"] = {
+      function() require("scissors").editSnippet() end,
+      desc = "Edit snippet"
+    },
     -- navigate buffer tabs with `H` and `L`
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
@@ -36,5 +39,11 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  v = {
+    ["<leader>sa"] = {
+      function() require("scissors").addNewSnippet() end,
+      desc = "Add new snippet"
+    },
   },
 }
